@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccJOwwFX.s 			page 1
+GAS LISTING /tmp/cckL26a9.s 			page 1
 
 
    1               		.file	"main.c"
@@ -7,7 +7,7 @@ GAS LISTING /tmp/ccJOwwFX.s 			page 1
    4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.stabs	"/home/jon/prog/c/avr/repware/",100,0,2,.Ltext0
+   7               		.stabs	"/home/jon/prog/c/avr/repcontroller/",100,0,2,.Ltext0
    8               		.stabs	"main.c",100,0,2,.Ltext0
    9               		.text
   10               	.Ltext0:
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccJOwwFX.s 			page 1
   55               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
   56               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
   57               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
-GAS LISTING /tmp/ccJOwwFX.s 			page 2
+GAS LISTING /tmp/cckL26a9.s 			page 2
 
 
   58               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
@@ -90,53 +90,26 @@ GAS LISTING /tmp/ccJOwwFX.s 			page 1
   80               	/* frame size = 0 */
   81               	/* stack size = 0 */
   82               	.L__stack_usage = 0
-  83               	.L10:
-  84               	.LBB2:
-   5:main.c        ****     for(;;)
-   6:main.c        ****     {
-   7:main.c        ****         if((serial_rxchars() != 0) && (queue_full() == 0)){
-  85               		.stabn	68,0,7,.LM1-.LFBB1
-  86               	.LM1:
-  87 0000 0E94 0000 		call serial_rxchars
-  88 0004 892B      		or r24,r25
-  89 0006 01F0      		breq .L10
-  90               		.stabn	68,0,7,.LM2-.LFBB1
-  91               	.LM2:
-  92 0008 0E94 0000 		call queue_full
-  93 000c 892B      		or r24,r25
-  94 000e 01F4      		brne .L10
-  95               	.LBB3:
-   8:main.c        ****             uint8_t c = serial_popchar();
-  96               		.stabn	68,0,8,.LM3-.LFBB1
-  97               	.LM3:
-  98 0010 0E94 0000 		call serial_popchar
-  99 0014 00C0      		rjmp .L10
- 100               	.LBE3:
- 101               	.LBE2:
- 102               		.size	main, .-main
- 103               	.Lscope1:
- 104               		.stabs	"",36,0,0,.Lscope1-.LFBB1
- 105               		.stabd	78,0,0
- 106               		.text
-GAS LISTING /tmp/ccJOwwFX.s 			page 3
-
-
- 107               		.stabs	"",100,0,0,.Letext0
- 108               	.Letext0:
- 109               		.ident	"GCC: (GNU) 4.7.0"
-GAS LISTING /tmp/ccJOwwFX.s 			page 4
+  83               	.L2:
+  84 0000 00C0      		rjmp .L2
+  85               		.size	main, .-main
+  86               	.Lscope1:
+  87               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+  88               		.stabd	78,0,0
+  89               		.text
+  90               		.stabs	"",100,0,0,.Letext0
+  91               	.Letext0:
+  92               		.ident	"GCC: (GNU) 4.7.0"
+GAS LISTING /tmp/cckL26a9.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccJOwwFX.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccJOwwFX.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccJOwwFX.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccJOwwFX.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccJOwwFX.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccJOwwFX.s:74     .text.startup:0000000000000000 main
+     /tmp/cckL26a9.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cckL26a9.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cckL26a9.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cckL26a9.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cckL26a9.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cckL26a9.s:74     .text.startup:0000000000000000 main
 
-UNDEFINED SYMBOLS
-serial_rxchars
-queue_full
-serial_popchar
+NO UNDEFINED SYMBOLS
