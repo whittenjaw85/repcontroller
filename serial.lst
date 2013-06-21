@@ -1,0 +1,1122 @@
+GAS LISTING /tmp/ccPFIQVl.s 			page 1
+
+
+   1               		.file	"serial.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/jon/prog/c/avr/repware/",100,0,2,.Ltext0
+   8               		.stabs	"serial.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"void:t(0,15)=(0,15)",128,0,0,0
+  27               		.stabs	"serial.h",130,0,0,0
+  28               		.stabs	"config.h",130,0,0,0
+  29               		.stabs	"arduino.h",130,0,0,0
+  30               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/avr/io.h",130,0,0,0
+  31               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/avr/sfr_defs.h",130,0,0,0
+  32               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/inttypes.h",130,0,0,0
+  33               		.stabs	"/usr/lib/gcc/avr/4.7.0/include/stdint.h",130,0,0,0
+  34               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/stdint.h",130,0,0,0
+  35               		.stabs	"int8_t:t(8,1)=(0,10)",128,0,121,0
+  36               		.stabs	"uint8_t:t(8,2)=(0,11)",128,0,122,0
+  37               		.stabs	"int16_t:t(8,3)=(0,1)",128,0,123,0
+  38               		.stabs	"uint16_t:t(8,4)=(0,4)",128,0,124,0
+  39               		.stabs	"int32_t:t(8,5)=(0,3)",128,0,125,0
+  40               		.stabs	"uint32_t:t(8,6)=(0,5)",128,0,126,0
+  41               		.stabs	"int64_t:t(8,7)=(0,6)",128,0,128,0
+  42               		.stabs	"uint64_t:t(8,8)=(0,7)",128,0,129,0
+  43               		.stabs	"intptr_t:t(8,9)=(8,3)",128,0,142,0
+  44               		.stabs	"uintptr_t:t(8,10)=(8,4)",128,0,147,0
+  45               		.stabs	"int_least8_t:t(8,11)=(8,1)",128,0,159,0
+  46               		.stabs	"uint_least8_t:t(8,12)=(8,2)",128,0,164,0
+  47               		.stabs	"int_least16_t:t(8,13)=(8,3)",128,0,169,0
+  48               		.stabs	"uint_least16_t:t(8,14)=(8,4)",128,0,174,0
+  49               		.stabs	"int_least32_t:t(8,15)=(8,5)",128,0,179,0
+  50               		.stabs	"uint_least32_t:t(8,16)=(8,6)",128,0,184,0
+  51               		.stabs	"int_least64_t:t(8,17)=(8,7)",128,0,192,0
+  52               		.stabs	"uint_least64_t:t(8,18)=(8,8)",128,0,199,0
+  53               		.stabs	"int_fast8_t:t(8,19)=(8,1)",128,0,213,0
+  54               		.stabs	"uint_fast8_t:t(8,20)=(8,2)",128,0,218,0
+  55               		.stabs	"int_fast16_t:t(8,21)=(8,3)",128,0,223,0
+  56               		.stabs	"uint_fast16_t:t(8,22)=(8,4)",128,0,228,0
+  57               		.stabs	"int_fast32_t:t(8,23)=(8,5)",128,0,233,0
+GAS LISTING /tmp/ccPFIQVl.s 			page 2
+
+
+  58               		.stabs	"uint_fast32_t:t(8,24)=(8,6)",128,0,238,0
+  59               		.stabs	"int_fast64_t:t(8,25)=(8,7)",128,0,246,0
+  60               		.stabs	"uint_fast64_t:t(8,26)=(8,8)",128,0,253,0
+  61               		.stabs	"intmax_t:t(8,27)=(8,7)",128,0,273,0
+  62               		.stabs	"uintmax_t:t(8,28)=(8,8)",128,0,278,0
+  63               		.stabn	162,0,0,0
+  64               		.stabn	162,0,0,0
+  65               		.stabs	"int_farptr_t:t(6,1)=(8,5)",128,0,77,0
+  66               		.stabs	"uint_farptr_t:t(6,2)=(8,6)",128,0,81,0
+  67               		.stabn	162,0,0,0
+  68               		.stabn	162,0,0,0
+  69               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/avr/fuse.h",130,0,0,0
+  70               		.stabs	"__fuse_t:t(9,1)=(9,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+  71               		.stabn	162,0,0,0
+  72               		.stabn	162,0,0,0
+  73               		.stabn	162,0,0,0
+  74               		.stabn	162,0,0,0
+  75               		.stabs	"/usr/lib/gcc/avr/4.7.0/../../../avr/include/avr/pgmspace.h",130,0,0,0
+  76               		.stabs	"/usr/lib/gcc/avr/4.7.0/include/stddef.h",130,0,0,0
+  77               		.stabs	"size_t:t(11,1)=(0,4)",128,0,213,0
+  78               		.stabn	162,0,0,0
+  79               		.stabn	162,0,0,0
+  80               		.stabn	162,0,0,0
+  81               		.stabs	"serial_init:F(0,15)",36,0,79,serial_init
+  82               	.global	serial_init
+  83               		.type	serial_init, @function
+  84               	serial_init:
+  85               		.stabd	46,0,0
+   1:serial.c      **** #include "serial.h"
+   2:serial.c      **** 
+   3:serial.c      **** /* Serial communication is circle buffer */
+   4:serial.c      **** /* Thanks to Teacup team... this is an attempt to figure out and apply your work to my personal ele
+   5:serial.c      **** 
+   6:serial.c      **** #include <avr/io.h>
+   7:serial.c      **** #include <avr/interrupt.h>
+   8:serial.c      **** 
+   9:serial.c      **** //#include "memory_barrier.h"
+  10:serial.c      **** 
+  11:serial.c      **** 
+  12:serial.c      **** 
+  13:serial.c      **** /*Config.h and arduino not necessary... yet*/
+  14:serial.c      **** //Must be order of 2^n
+  15:serial.c      **** #define BUFSIZE	64
+  16:serial.c      **** 
+  17:serial.c      **** //Ascii XOFF char
+  18:serial.c      **** #define ASCII_XOFF  19
+  19:serial.c      **** #define ASCII_XON   17
+  20:serial.c      **** 
+  21:serial.c      **** //RxBuffer head
+  22:serial.c      **** volatile uint8_t rxhead = 0;
+  23:serial.c      **** //RxBuffer Tail
+  24:serial.c      **** volatile uint8_t rxtail = 0;
+  25:serial.c      **** //RxBuffer Variable
+  26:serial.c      **** volatile uint8_t rxbuf[BUFSIZE];
+  27:serial.c      **** 
+  28:serial.c      **** //TxBuffer head
+  29:serial.c      **** volatile uint8_t txhead = 0;
+GAS LISTING /tmp/ccPFIQVl.s 			page 3
+
+
+  30:serial.c      **** //TxBufferTail
+  31:serial.c      **** volatile uint8_t txtail = 0;
+  32:serial.c      **** //TxBuffer Variable
+  33:serial.c      **** volatile uint8_t txbuf[BUFSIZE];
+  34:serial.c      **** 
+  35:serial.c      **** /* Unique macros for interfacing with buffers  */
+  36:serial.c      **** //Determine if buffer is full
+  37:serial.c      **** #define buffer_canread(buffer)	((buffer ## head - buffer ## tail ) & (BUFSIZE-1))
+  38:serial.c      **** 
+  39:serial.c      **** //Read data from buffer
+  40:serial.c      **** #define buffer_pop(buffer, data)   do { data = buffer ## buf[buffer ## tail]; buffer ## tail = (buf
+  41:serial.c      **** 
+  42:serial.c      **** //Determine if the buffer can be written
+  43:serial.c      **** #define buffer_canwrite(buffer)	((buffer ## tail - buffer ## head - 1 ) & (BUFSIZE - 1))
+  44:serial.c      **** 
+  45:serial.c      **** #define buffer_push(buffer, data) do { buffer ## buf[buffer ## head] = data; buffer ## head = (buff
+  46:serial.c      **** 
+  47:serial.c      **** /* Ringbuffer Discussion-------
+  48:serial.c      **** 
+  49:serial.c      **** head = written data pointer
+  50:serial.c      **** tail = read data pointer
+  51:serial.c      **** 
+  52:serial.c      **** when the pointers are the same, the buffer is empty
+  53:serial.c      **** when (head+1) == tail, buffer is full
+  54:serial.c      **** available space is (tail - head) & bufsize
+  55:serial.c      **** 
+  56:serial.c      **** can write:
+  57:serial.c      ****     (tail-head-1) & (BUFSIZE - 1)
+  58:serial.c      **** can read:
+  59:serial.c      ****     (head - tail) & (BUFSIZE - 1)
+  60:serial.c      **** write to buffer:
+  61:serial.c      ****     buf[head++] = data; head &= (BUFSIZE - 1);
+  62:serial.c      **** read from buffer:
+  63:serial.c      ****     data = buf[tail++]; tail &= (BUFSIZE - 1);
+  64:serial.c      **** */
+  65:serial.c      **** 
+  66:serial.c      **** #ifdef	XONXOFF
+  67:serial.c      **** #define FLOWFLAG_STATE_XOFF 0
+  68:serial.c      **** #define FLOWFLAG_SEND_XON   1
+  69:serial.c      **** #define FLOWFLAG_SEND_XOFF  2
+  70:serial.c      **** #define FLOWFLAG_STATE_XON  4
+  71:serial.c      **** 
+  72:serial.c      **** //Initially send an XON
+  73:serial.c      **** volatile uint8_t flowflags = FLOWFLAG_SEND_XON;
+  74:serial.c      **** #endif
+  75:serial.c      **** 
+  76:serial.c      **** 
+  77:serial.c      **** /*ONWARD TO AMAZING FUNCTIONS   */
+  78:serial.c      **** //Setup baud generator and interrupts, clear buffers
+  79:serial.c      **** void serial_init(){
+  86               		.stabn	68,0,79,.LM0-.LFBB1
+  87               	.LM0:
+  88               	.LFBB1:
+  89               	/* prologue: function */
+  90               	/* frame size = 0 */
+  91               	/* stack size = 0 */
+  92               	.L__stack_usage = 0
+GAS LISTING /tmp/ccPFIQVl.s 			page 4
+
+
+  80:serial.c      **** #if BAUD > 38401
+  81:serial.c      **** 	UCSR1A = MASK(U2X1); //asynchronous doublespeed mode
+  93               		.stabn	68,0,81,.LM1-.LFBB1
+  94               	.LM1:
+  95 0000 82E0      		ldi r24,lo8(2)
+  96 0002 8093 C800 		sts 200,r24
+  82:serial.c      **** 	UBRR1 = (((F_CPU / 8) / BAUD) - 0.5);
+  97               		.stabn	68,0,82,.LM2-.LFBB1
+  98               	.LM2:
+  99 0006 80E1      		ldi r24,lo8(16)
+ 100 0008 90E0      		ldi r25,0
+ 101 000a 9093 CD00 		sts 204+1,r25
+ 102 000e 8093 CC00 		sts 204,r24
+  83:serial.c      **** #else
+  84:serial.c      **** 	UCSR1A = 0; //set asynchronous normal mode
+  85:serial.c      **** 	UBRR! = (((F_CPU / 16) / BAUD) - 0.5); //asynchronous normal mode
+  86:serial.c      **** #endif
+  87:serial.c      **** 	UCSR1B = MASK(RXEN1) | MASK(TXEN1); //enable rx and tx
+ 103               		.stabn	68,0,87,.LM3-.LFBB1
+ 104               	.LM3:
+ 105 0012 E9EC      		ldi r30,lo8(-55)
+ 106 0014 F0E0      		ldi r31,0
+ 107 0016 88E1      		ldi r24,lo8(24)
+ 108 0018 8083      		st Z,r24
+  88:serial.c      **** 	UCSR1C = MASK(UCSZ11) | MASK(UCSZ10); //8-bit data no parity 1-stop
+ 109               		.stabn	68,0,88,.LM4-.LFBB1
+ 110               	.LM4:
+ 111 001a 86E0      		ldi r24,lo8(6)
+ 112 001c 8093 CA00 		sts 202,r24
+  89:serial.c      **** 	UCSR1B |= MASK(RXCIE1) | MASK(UDRIE1); //Serial Interrupts Enable
+ 113               		.stabn	68,0,89,.LM5-.LFBB1
+ 114               	.LM5:
+ 115 0020 8081      		ld r24,Z
+ 116 0022 806A      		ori r24,lo8(-96)
+ 117 0024 8083      		st Z,r24
+ 118 0026 0895      		ret
+ 119               		.size	serial_init, .-serial_init
+ 120               	.Lscope1:
+ 121               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 122               		.stabd	78,0,0
+ 123               		.stabs	"UART1_RX_vect:F(0,15)",36,0,97,UART1_RX_vect
+ 124               	.global	UART1_RX_vect
+ 125               		.type	UART1_RX_vect, @function
+ 126               	UART1_RX_vect:
+ 127               		.stabd	46,0,0
+  90:serial.c      **** }
+  91:serial.c      **** 
+  92:serial.c      **** 
+  93:serial.c      **** /*   Interrupts  */
+  94:serial.c      **** #ifdef USART_RX_vect
+  95:serial.c      **** ISR(USART_RX_vect)
+  96:serial.c      **** #else
+  97:serial.c      **** ISR(UART1_RX_vect)
+  98:serial.c      **** #endif
+  99:serial.c      **** {
+ 128               		.stabn	68,0,99,.LM6-.LFBB2
+ 129               	.LM6:
+GAS LISTING /tmp/ccPFIQVl.s 			page 5
+
+
+ 130               	.LFBB2:
+ 131 0028 1F92      		push r1
+ 132 002a 0F92      		push r0
+ 133 002c 0FB6      		in r0,__SREG__
+ 134 002e 0F92      		push r0
+ 135 0030 1124      		clr __zero_reg__
+ 136 0032 2F93      		push r18
+ 137 0034 3F93      		push r19
+ 138 0036 8F93      		push r24
+ 139 0038 9F93      		push r25
+ 140 003a EF93      		push r30
+ 141 003c FF93      		push r31
+ 142               	/* prologue: Signal */
+ 143               	/* frame size = 0 */
+ 144               	/* stack size = 9 */
+ 145               	.L__stack_usage = 9
+ 100:serial.c      ****     //Save status register
+ 101:serial.c      ****     uint8_t sreg_save = SREG;
+ 146               		.stabn	68,0,101,.LM7-.LFBB2
+ 147               	.LM7:
+ 148 003e 2FB7      		in r18,__SREG__
+ 102:serial.c      **** 
+ 103:serial.c      ****     if (buffer_canwrite(rx)) buffer_push(rx, UDR1);
+ 149               		.stabn	68,0,103,.LM8-.LFBB2
+ 150               	.LM8:
+ 151 0040 8091 0000 		lds r24,rxtail
+ 152 0044 3091 0000 		lds r19,rxhead
+ 153 0048 90E0      		ldi r25,0
+ 154 004a 831B      		sub r24,r19
+ 155 004c 9109      		sbc r25,__zero_reg__
+ 156 004e 0197      		sbiw r24,1
+ 157 0050 8F73      		andi r24,63
+ 158 0052 9927      		clr r25
+ 159 0054 892B      		or r24,r25
+ 160 0056 01F0      		breq .L3
+ 161               		.stabn	68,0,103,.LM9-.LFBB2
+ 162               	.LM9:
+ 163 0058 E091 0000 		lds r30,rxhead
+ 164 005c F0E0      		ldi r31,0
+ 165 005e 8091 CE00 		lds r24,206
+ 166 0062 E050      		subi r30,lo8(-(rxbuf))
+ 167 0064 F040      		sbci r31,hi8(-(rxbuf))
+ 168 0066 8083      		st Z,r24
+ 169 0068 8091 0000 		lds r24,rxhead
+ 170 006c 8F5F      		subi r24,lo8(-(1))
+ 171 006e 8F73      		andi r24,lo8(63)
+ 172 0070 8093 0000 		sts rxhead,r24
+ 173 0074 00C0      		rjmp .L4
+ 174               	.L3:
+ 175               	.LBB2:
+ 104:serial.c      ****     else{
+ 105:serial.c      ****         uint8_t trash;
+ 106:serial.c      ****         //Not reading character requires discarding it
+ 107:serial.c      ****         trash = UDR1;
+ 176               		.stabn	68,0,107,.LM10-.LFBB2
+ 177               	.LM10:
+ 178 0076 8091 CE00 		lds r24,206
+GAS LISTING /tmp/ccPFIQVl.s 			page 6
+
+
+ 179               	.L4:
+ 180               	.LBE2:
+ 108:serial.c      ****     }
+ 109:serial.c      ****    
+ 110:serial.c      ****     #ifdef XONXOFF
+ 111:serial.c      ****     if (flowflags & FLOWFLAG_STATE_XON && buffer_canwrite(rx) < 16){
+ 181               		.stabn	68,0,111,.LM11-.LFBB2
+ 182               	.LM11:
+ 183 007a 8091 0000 		lds r24,flowflags
+ 184 007e 82FF      		sbrs r24,2
+ 185 0080 00C0      		rjmp .L5
+ 186               		.stabn	68,0,111,.LM12-.LFBB2
+ 187               	.LM12:
+ 188 0082 8091 0000 		lds r24,rxtail
+ 189 0086 3091 0000 		lds r19,rxhead
+ 190 008a 90E0      		ldi r25,0
+ 191 008c 831B      		sub r24,r19
+ 192 008e 9109      		sbc r25,__zero_reg__
+ 193 0090 0197      		sbiw r24,1
+ 194 0092 8F73      		andi r24,63
+ 195 0094 9927      		clr r25
+ 196 0096 4097      		sbiw r24,16
+ 197 0098 04F4      		brge .L5
+ 112:serial.c      **** 	//The buffer has only 16 free characters left, so send XOFF
+ 113:serial.c      **** 	// more characters may be transmitted until XOFF affects
+ 114:serial.c      ****         flowflags = FLOWFLAG_SEND_XOFF | FLOWFLAG_STATE_XON;
+ 198               		.stabn	68,0,114,.LM13-.LFBB2
+ 199               	.LM13:
+ 200 009a 86E0      		ldi r24,lo8(6)
+ 201 009c 8093 0000 		sts flowflags,r24
+ 115:serial.c      ****         //enable Tx Interrupt
+ 116:serial.c      ****         UCSR1B |= MASK(UDRIE1);
+ 202               		.stabn	68,0,116,.LM14-.LFBB2
+ 203               	.LM14:
+ 204 00a0 8091 C900 		lds r24,201
+ 205 00a4 8062      		ori r24,lo8(32)
+ 206 00a6 8093 C900 		sts 201,r24
+ 207               	.L5:
+ 117:serial.c      ****     }
+ 118:serial.c      ****     #endif
+ 119:serial.c      **** 
+ 120:serial.c      ****     //Restore status register
+ 121:serial.c      ****     //MEMORY BARRIER
+ 122:serial.c      ****     SREG = sreg_save;
+ 208               		.stabn	68,0,122,.LM15-.LFBB2
+ 209               	.LM15:
+ 210 00aa 2FBF      		out __SREG__,r18
+ 211               	/* epilogue start */
+ 123:serial.c      **** }//end RX Interrupt ISR
+ 212               		.stabn	68,0,123,.LM16-.LFBB2
+ 213               	.LM16:
+ 214 00ac FF91      		pop r31
+ 215 00ae EF91      		pop r30
+ 216 00b0 9F91      		pop r25
+ 217 00b2 8F91      		pop r24
+ 218 00b4 3F91      		pop r19
+ 219 00b6 2F91      		pop r18
+GAS LISTING /tmp/ccPFIQVl.s 			page 7
+
+
+ 220 00b8 0F90      		pop r0
+ 221 00ba 0FBE      		out __SREG__,r0
+ 222 00bc 0F90      		pop r0
+ 223 00be 1F90      		pop r1
+ 224 00c0 1895      		reti
+ 225               		.size	UART1_RX_vect, .-UART1_RX_vect
+ 226               		.stabs	"sreg_save:r(8,2)",64,0,101,18
+ 227               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 228               		.stabs	"trash:r(8,2)",64,0,105,24
+ 229               		.stabn	192,0,0,.LBB2-.LFBB2
+ 230               		.stabn	224,0,0,.LBE2-.LFBB2
+ 231               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 232               	.Lscope2:
+ 233               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 234               		.stabd	78,0,0
+ 235               		.stabs	"__vector_26:F(0,15)",36,0,129,__vector_26
+ 236               	.global	__vector_26
+ 237               		.type	__vector_26, @function
+ 238               	__vector_26:
+ 239               		.stabd	46,0,0
+ 124:serial.c      **** 
+ 125:serial.c      **** //Transmit Buffer Ready Vector 
+ 126:serial.c      **** #ifdef USART_UDRE_vect
+ 127:serial.c      **** ISR(USART_UDRE_vect)
+ 128:serial.c      **** #else
+ 129:serial.c      **** ISR(USART1_UDRE_vect)
+ 130:serial.c      **** #endif
+ 131:serial.c      **** {
+ 240               		.stabn	68,0,131,.LM17-.LFBB3
+ 241               	.LM17:
+ 242               	.LFBB3:
+ 243 00c2 1F92      		push r1
+ 244 00c4 0F92      		push r0
+ 245 00c6 0FB6      		in r0,__SREG__
+ 246 00c8 0F92      		push r0
+ 247 00ca 1124      		clr __zero_reg__
+ 248 00cc 2F93      		push r18
+ 249 00ce 3F93      		push r19
+ 250 00d0 8F93      		push r24
+ 251 00d2 9F93      		push r25
+ 252 00d4 EF93      		push r30
+ 253 00d6 FF93      		push r31
+ 254               	/* prologue: Signal */
+ 255               	/* frame size = 0 */
+ 256               	/* stack size = 9 */
+ 257               	.L__stack_usage = 9
+ 132:serial.c      ****     //Save Status
+ 133:serial.c      ****     uint8_t sreg_save = SREG;
+ 258               		.stabn	68,0,133,.LM18-.LFBB3
+ 259               	.LM18:
+ 260 00d8 2FB7      		in r18,__SREG__
+ 134:serial.c      **** 
+ 135:serial.c      ****     #ifdef XONXOFF
+ 136:serial.c      ****     if (flowflags & FLOWFLAG_SEND_XON) {
+ 261               		.stabn	68,0,136,.LM19-.LFBB3
+ 262               	.LM19:
+ 263 00da 8091 0000 		lds r24,flowflags
+GAS LISTING /tmp/ccPFIQVl.s 			page 8
+
+
+ 264 00de 80FF      		sbrs r24,0
+ 265 00e0 00C0      		rjmp .L10
+ 137:serial.c      ****         UDR1 = ASCII_XON;
+ 266               		.stabn	68,0,137,.LM20-.LFBB3
+ 267               	.LM20:
+ 268 00e2 81E1      		ldi r24,lo8(17)
+ 269 00e4 8093 CE00 		sts 206,r24
+ 138:serial.c      ****         flowflags = FLOWFLAG_STATE_XON;
+ 270               		.stabn	68,0,138,.LM21-.LFBB3
+ 271               	.LM21:
+ 272 00e8 84E0      		ldi r24,lo8(4)
+ 273 00ea 8093 0000 		sts flowflags,r24
+ 274 00ee 00C0      		rjmp .L11
+ 275               	.L10:
+ 139:serial.c      ****     }
+ 140:serial.c      ****     else if (flowflags & FLOWFLAG_SEND_XOFF) { 
+ 276               		.stabn	68,0,140,.LM22-.LFBB3
+ 277               	.LM22:
+ 278 00f0 8091 0000 		lds r24,flowflags
+ 279 00f4 81FF      		sbrs r24,1
+ 280 00f6 00C0      		rjmp .L12
+ 141:serial.c      ****         UDR1 = ASCII_XOFF;
+ 281               		.stabn	68,0,141,.LM23-.LFBB3
+ 282               	.LM23:
+ 283 00f8 83E1      		ldi r24,lo8(19)
+ 284 00fa 8093 CE00 		sts 206,r24
+ 142:serial.c      ****         flowflags = FLOWFLAG_STATE_XOFF;
+ 285               		.stabn	68,0,142,.LM24-.LFBB3
+ 286               	.LM24:
+ 287 00fe 1092 0000 		sts flowflags,__zero_reg__
+ 288 0102 00C0      		rjmp .L11
+ 289               	.L12:
+ 143:serial.c      ****     }
+ 144:serial.c      ****     else
+ 145:serial.c      ****     #endif
+ 146:serial.c      ****     if (buffer_canread(rx)) buffer_pop(tx, UDR1);
+ 290               		.stabn	68,0,146,.LM25-.LFBB3
+ 291               	.LM25:
+ 292 0104 8091 0000 		lds r24,rxhead
+ 293 0108 3091 0000 		lds r19,rxtail
+ 294 010c 90E0      		ldi r25,0
+ 295 010e 831B      		sub r24,r19
+ 296 0110 9109      		sbc r25,__zero_reg__
+ 297 0112 8F73      		andi r24,63
+ 298 0114 9927      		clr r25
+ 299 0116 892B      		or r24,r25
+ 300 0118 01F0      		breq .L13
+ 301               		.stabn	68,0,146,.LM26-.LFBB3
+ 302               	.LM26:
+ 303 011a E091 0000 		lds r30,txtail
+ 304 011e F0E0      		ldi r31,0
+ 305 0120 E050      		subi r30,lo8(-(txbuf))
+ 306 0122 F040      		sbci r31,hi8(-(txbuf))
+ 307 0124 8081      		ld r24,Z
+ 308 0126 8093 CE00 		sts 206,r24
+ 309 012a 8091 0000 		lds r24,txtail
+ 310 012e 8F5F      		subi r24,lo8(-(1))
+GAS LISTING /tmp/ccPFIQVl.s 			page 9
+
+
+ 311 0130 8F73      		andi r24,lo8(63)
+ 312 0132 8093 0000 		sts txtail,r24
+ 313 0136 00C0      		rjmp .L11
+ 314               	.L13:
+ 147:serial.c      ****     else UCSR1B &= ~MASK(UDRIE1);
+ 315               		.stabn	68,0,147,.LM27-.LFBB3
+ 316               	.LM27:
+ 317 0138 8091 C900 		lds r24,201
+ 318 013c 8F7D      		andi r24,lo8(-33)
+ 319 013e 8093 C900 		sts 201,r24
+ 320               	.L11:
+ 148:serial.c      **** 
+ 149:serial.c      ****     //Memory barrier is needed sometimes: why not this one?
+ 150:serial.c      ****     //restore status register
+ 151:serial.c      ****     SREG = sreg_save;
+ 321               		.stabn	68,0,151,.LM28-.LFBB3
+ 322               	.LM28:
+ 323 0142 2FBF      		out __SREG__,r18
+ 324               	/* epilogue start */
+ 152:serial.c      **** }//End TX Interrupt Vector
+ 325               		.stabn	68,0,152,.LM29-.LFBB3
+ 326               	.LM29:
+ 327 0144 FF91      		pop r31
+ 328 0146 EF91      		pop r30
+ 329 0148 9F91      		pop r25
+ 330 014a 8F91      		pop r24
+ 331 014c 3F91      		pop r19
+ 332 014e 2F91      		pop r18
+ 333 0150 0F90      		pop r0
+ 334 0152 0FBE      		out __SREG__,r0
+ 335 0154 0F90      		pop r0
+ 336 0156 1F90      		pop r1
+ 337 0158 1895      		reti
+ 338               		.size	__vector_26, .-__vector_26
+ 339               		.stabs	"sreg_save:r(8,2)",64,0,133,18
+ 340               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 341               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 342               	.Lscope3:
+ 343               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 344               		.stabd	78,0,0
+ 345               		.stabs	"serial_rxchars:F(8,2)",36,0,159,serial_rxchars
+ 346               	.global	serial_rxchars
+ 347               		.type	serial_rxchars, @function
+ 348               	serial_rxchars:
+ 349               		.stabd	46,0,0
+ 153:serial.c      **** 
+ 154:serial.c      **** //----------------------------------
+ 155:serial.c      **** // Reading Routines Below
+ 156:serial.c      **** //----------------------------------
+ 157:serial.c      **** 
+ 158:serial.c      **** //Determine how many chars are in the buffer
+ 159:serial.c      **** uint8_t serial_rxchars(){return buffer_canread(rx);}
+ 350               		.stabn	68,0,159,.LM30-.LFBB4
+ 351               	.LM30:
+ 352               	.LFBB4:
+ 353               	/* prologue: function */
+ 354               	/* frame size = 0 */
+GAS LISTING /tmp/ccPFIQVl.s 			page 10
+
+
+ 355               	/* stack size = 0 */
+ 356               	.L__stack_usage = 0
+ 357               		.stabn	68,0,159,.LM31-.LFBB4
+ 358               	.LM31:
+ 359 015a 8091 0000 		lds r24,rxhead
+ 360 015e 9091 0000 		lds r25,rxtail
+ 361 0162 891B      		sub r24,r25
+ 362 0164 8F73      		andi r24,lo8(63)
+ 363 0166 0895      		ret
+ 364               		.size	serial_rxchars, .-serial_rxchars
+ 365               	.Lscope4:
+ 366               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 367               		.stabd	78,0,0
+ 368               		.stabs	"serial_popchar:F(8,2)",36,0,162,serial_popchar
+ 369               	.global	serial_popchar
+ 370               		.type	serial_popchar, @function
+ 371               	serial_popchar:
+ 372               		.stabd	46,0,0
+ 160:serial.c      **** 
+ 161:serial.c      **** //read a char
+ 162:serial.c      **** uint8_t serial_popchar()
+ 163:serial.c      **** {
+ 373               		.stabn	68,0,163,.LM32-.LFBB5
+ 374               	.LM32:
+ 375               	.LFBB5:
+ 376               	/* prologue: function */
+ 377               	/* frame size = 0 */
+ 378               	/* stack size = 0 */
+ 379               	.L__stack_usage = 0
+ 164:serial.c      ****     uint8_t c = 0;
+ 165:serial.c      **** 
+ 166:serial.c      ****     //Ensure buffer is empty, then read
+ 167:serial.c      ****     if (buffer_canread(rx))
+ 380               		.stabn	68,0,167,.LM33-.LFBB5
+ 381               	.LM33:
+ 382 0168 8091 0000 		lds r24,rxhead
+ 383 016c 2091 0000 		lds r18,rxtail
+ 384 0170 90E0      		ldi r25,0
+ 385 0172 821B      		sub r24,r18
+ 386 0174 9109      		sbc r25,__zero_reg__
+ 387 0176 8F73      		andi r24,63
+ 388 0178 9927      		clr r25
+ 389 017a 892B      		or r24,r25
+ 390 017c 01F0      		breq .L18
+ 168:serial.c      **** 	buffer_pop(rx, c);
+ 391               		.stabn	68,0,168,.LM34-.LFBB5
+ 392               	.LM34:
+ 393 017e E091 0000 		lds r30,rxtail
+ 394 0182 F0E0      		ldi r31,0
+ 395 0184 E050      		subi r30,lo8(-(rxbuf))
+ 396 0186 F040      		sbci r31,hi8(-(rxbuf))
+ 397 0188 8081      		ld r24,Z
+ 398 018a 9091 0000 		lds r25,rxtail
+ 399 018e 9F5F      		subi r25,lo8(-(1))
+ 400 0190 9F73      		andi r25,lo8(63)
+ 401 0192 9093 0000 		sts rxtail,r25
+ 402 0196 00C0      		rjmp .L16
+GAS LISTING /tmp/ccPFIQVl.s 			page 11
+
+
+ 403               	.L18:
+ 164:serial.c      ****     uint8_t c = 0;
+ 404               		.stabn	68,0,164,.LM35-.LFBB5
+ 405               	.LM35:
+ 406 0198 80E0      		ldi r24,0
+ 407               	.L16:
+ 169:serial.c      **** #ifdef XONXOFF
+ 170:serial.c      ****     if ((flowflags & FLOWFLAG_STATE_XON) == 0 && buffer_canread(rx) < 16){
+ 408               		.stabn	68,0,170,.LM36-.LFBB5
+ 409               	.LM36:
+ 410 019a 9091 0000 		lds r25,flowflags
+ 411 019e 92FD      		sbrc r25,2
+ 412 01a0 00C0      		rjmp .L17
+ 413               		.stabn	68,0,170,.LM37-.LFBB5
+ 414               	.LM37:
+ 415 01a2 2091 0000 		lds r18,rxhead
+ 416 01a6 9091 0000 		lds r25,rxtail
+ 417 01aa 30E0      		ldi r19,0
+ 418 01ac 291B      		sub r18,r25
+ 419 01ae 3109      		sbc r19,__zero_reg__
+ 420 01b0 2F73      		andi r18,63
+ 421 01b2 3327      		clr r19
+ 422 01b4 2031      		cpi r18,16
+ 423 01b6 3105      		cpc r19,__zero_reg__
+ 424 01b8 04F4      		brge .L17
+ 171:serial.c      **** 	//the buffer has (BUFSIZE - 16) free characters again, send XON
+ 172:serial.c      **** 	flowflags = FLOWFLAG_SEND_XON;
+ 425               		.stabn	68,0,172,.LM38-.LFBB5
+ 426               	.LM38:
+ 427 01ba 91E0      		ldi r25,lo8(1)
+ 428 01bc 9093 0000 		sts flowflags,r25
+ 173:serial.c      **** 	UCSR1B |= MASK(UDRIE1);
+ 429               		.stabn	68,0,173,.LM39-.LFBB5
+ 430               	.LM39:
+ 431 01c0 9091 C900 		lds r25,201
+ 432 01c4 9062      		ori r25,lo8(32)
+ 433 01c6 9093 C900 		sts 201,r25
+ 434               	.L17:
+ 174:serial.c      ****     }
+ 175:serial.c      **** #endif
+ 176:serial.c      **** 
+ 177:serial.c      ****     return c;
+ 178:serial.c      **** }//end readchar()
+ 435               		.stabn	68,0,178,.LM40-.LFBB5
+ 436               	.LM40:
+ 437 01ca 0895      		ret
+ 438               		.size	serial_popchar, .-serial_popchar
+ 439               		.stabs	"c:r(8,2)",64,0,164,24
+ 440               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 441               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 442               	.Lscope5:
+ 443               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 444               		.stabd	78,0,0
+ 445               		.stabs	"serial_writechar:F(0,15)",36,0,185,serial_writechar
+ 446               		.stabs	"data:P(8,2)",64,0,185,24
+ 447               	.global	serial_writechar
+ 448               		.type	serial_writechar, @function
+GAS LISTING /tmp/ccPFIQVl.s 			page 12
+
+
+ 449               	serial_writechar:
+ 450               		.stabd	46,0,0
+ 179:serial.c      **** 
+ 180:serial.c      **** //----------------------------------
+ 181:serial.c      **** // Write routines below
+ 182:serial.c      **** //----------------------------------
+ 183:serial.c      **** 
+ 184:serial.c      **** //Send a char
+ 185:serial.c      **** void serial_writechar(uint8_t data)
+ 186:serial.c      **** {
+ 451               		.stabn	68,0,186,.LM41-.LFBB6
+ 452               	.LM41:
+ 453               	.LFBB6:
+ 454               	/* prologue: function */
+ 455               	/* frame size = 0 */
+ 456               	/* stack size = 0 */
+ 457               	.L__stack_usage = 0
+ 187:serial.c      ****     //Block interrupts if enabled
+ 188:serial.c      ****     if (SREG & MASK(SREG_I)){
+ 458               		.stabn	68,0,188,.LM42-.LFBB6
+ 459               	.LM42:
+ 460 01cc 0FB6      		in __tmp_reg__,__SREG__
+ 461 01ce 07FE      		sbrs __tmp_reg__,7
+ 462 01d0 00C0      		rjmp .L29
+ 463 01d2 00C0      		rjmp .L27
+ 464               	.L22:
+ 189:serial.c      ****         for(;buffer_canwrite(tx) == 0;) buffer_push(tx, data);
+ 465               		.stabn	68,0,189,.LM43-.LFBB6
+ 466               	.LM43:
+ 467 01d4 E091 0000 		lds r30,txhead
+ 468 01d8 F0E0      		ldi r31,0
+ 469 01da E050      		subi r30,lo8(-(txbuf))
+ 470 01dc F040      		sbci r31,hi8(-(txbuf))
+ 471 01de 8083      		st Z,r24
+ 472 01e0 9091 0000 		lds r25,txhead
+ 473 01e4 9F5F      		subi r25,lo8(-(1))
+ 474 01e6 9F73      		andi r25,lo8(63)
+ 475 01e8 9093 0000 		sts txhead,r25
+ 476               	.L27:
+ 477               		.stabn	68,0,189,.LM44-.LFBB6
+ 478               	.LM44:
+ 479 01ec 2091 0000 		lds r18,txtail
+ 480 01f0 9091 0000 		lds r25,txhead
+ 481 01f4 30E0      		ldi r19,0
+ 482 01f6 291B      		sub r18,r25
+ 483 01f8 3109      		sbc r19,__zero_reg__
+ 484 01fa 2150      		subi r18,1
+ 485 01fc 3109      		sbc r19,__zero_reg__
+ 486 01fe 2F73      		andi r18,63
+ 487 0200 3327      		clr r19
+ 488 0202 232B      		or r18,r19
+ 489 0204 01F0      		breq .L22
+ 490 0206 00C0      		rjmp .L23
+ 491               	.L29:
+ 190:serial.c      ****     }
+ 191:serial.c      ****     else{
+ 192:serial.c      **** 	//interrupts disabled, write instead of blocking
+GAS LISTING /tmp/ccPFIQVl.s 			page 13
+
+
+ 193:serial.c      ****         if (buffer_canwrite(tx))
+ 492               		.stabn	68,0,193,.LM45-.LFBB6
+ 493               	.LM45:
+ 494 0208 2091 0000 		lds r18,txtail
+ 495 020c 9091 0000 		lds r25,txhead
+ 496 0210 30E0      		ldi r19,0
+ 497 0212 291B      		sub r18,r25
+ 498 0214 3109      		sbc r19,__zero_reg__
+ 499 0216 2150      		subi r18,1
+ 500 0218 3109      		sbc r19,__zero_reg__
+ 501 021a 2F73      		andi r18,63
+ 502 021c 3327      		clr r19
+ 503 021e 232B      		or r18,r19
+ 504 0220 01F0      		breq .L23
+ 194:serial.c      ****             buffer_push(tx, data);
+ 505               		.stabn	68,0,194,.LM46-.LFBB6
+ 506               	.LM46:
+ 507 0222 E091 0000 		lds r30,txhead
+ 508 0226 F0E0      		ldi r31,0
+ 509 0228 E050      		subi r30,lo8(-(txbuf))
+ 510 022a F040      		sbci r31,hi8(-(txbuf))
+ 511 022c 8083      		st Z,r24
+ 512 022e 8091 0000 		lds r24,txhead
+ 513 0232 8F5F      		subi r24,lo8(-(1))
+ 514 0234 8F73      		andi r24,lo8(63)
+ 515 0236 8093 0000 		sts txhead,r24
+ 516               	.L23:
+ 195:serial.c      ****     }
+ 196:serial.c      ****     //Endable TX Interrupt so we can send the char
+ 197:serial.c      ****     UCSR1B |= MASK(UDRIE1);
+ 517               		.stabn	68,0,197,.LM47-.LFBB6
+ 518               	.LM47:
+ 519 023a 8091 C900 		lds r24,201
+ 520 023e 8062      		ori r24,lo8(32)
+ 521 0240 8093 C900 		sts 201,r24
+ 522 0244 0895      		ret
+ 523               		.size	serial_writechar, .-serial_writechar
+ 524               	.Lscope6:
+ 525               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 526               		.stabd	78,0,0
+ 527               		.stabs	"serial_writeblock:F(0,15)",36,0,201,serial_writeblock
+ 528               		.stabs	"len:P(0,1)",64,0,201,14
+ 529               	.global	serial_writeblock
+ 530               		.type	serial_writeblock, @function
+ 531               	serial_writeblock:
+ 532               		.stabd	46,0,0
+ 198:serial.c      **** }
+ 199:serial.c      **** 
+ 200:serial.c      **** //Send block of data
+ 201:serial.c      **** void serial_writeblock(void *data, int len){
+ 533               		.stabn	68,0,201,.LM48-.LFBB7
+ 534               	.LM48:
+ 535               	.LFBB7:
+ 536 0246 EF92      		push r14
+ 537 0248 FF92      		push r15
+ 538 024a 0F93      		push r16
+ 539 024c 1F93      		push r17
+GAS LISTING /tmp/ccPFIQVl.s 			page 14
+
+
+ 540 024e CF93      		push r28
+ 541 0250 DF93      		push r29
+ 542               	/* prologue: function */
+ 543               	/* frame size = 0 */
+ 544               	/* stack size = 6 */
+ 545               	.L__stack_usage = 6
+ 546 0252 7B01      		movw r14,r22
+ 547 0254 EC01      		movw r28,r24
+ 202:serial.c      ****     int i;
+ 203:serial.c      ****     for (i = 0; i < len ; i++)	serial_writechar(((uint8_t *) data)[i]);
+ 548               		.stabn	68,0,203,.LM49-.LFBB7
+ 549               	.LM49:
+ 550 0256 8C01      		movw r16,r24
+ 551 0258 00C0      		rjmp .L31
+ 552               	.L32:
+ 553               		.stabn	68,0,203,.LM50-.LFBB7
+ 554               	.LM50:
+ 555 025a F801      		movw r30,r16
+ 556 025c 8191      		ld r24,Z+
+ 557 025e 8F01      		movw r16,r30
+ 558 0260 0E94 0000 		call serial_writechar
+ 559               	.L31:
+ 201:serial.c      **** void serial_writeblock(void *data, int len){
+ 560               		.stabn	68,0,201,.LM51-.LFBB7
+ 561               	.LM51:
+ 562 0264 C801      		movw r24,r16
+ 563 0266 8C1B      		sub r24,r28
+ 564 0268 9D0B      		sbc r25,r29
+ 565               		.stabn	68,0,203,.LM52-.LFBB7
+ 566               	.LM52:
+ 567 026a 8E15      		cp r24,r14
+ 568 026c 9F05      		cpc r25,r15
+ 569 026e 04F0      		brlt .L32
+ 570               	/* epilogue start */
+ 204:serial.c      **** }//End serial_writedata
+ 571               		.stabn	68,0,204,.LM53-.LFBB7
+ 572               	.LM53:
+ 573 0270 DF91      		pop r29
+ 574 0272 CF91      		pop r28
+ 575 0274 1F91      		pop r17
+ 576 0276 0F91      		pop r16
+ 577 0278 FF90      		pop r15
+ 578 027a EF90      		pop r14
+ 579 027c 0895      		ret
+ 580               		.size	serial_writeblock, .-serial_writeblock
+ 581               	.Lscope7:
+ 582               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 583               		.stabd	78,0,0
+ 584               		.stabs	"serial_writestr:F(0,15)",36,0,207,serial_writestr
+ 585               		.stabs	"data:P(0,16)=*(8,2)",64,0,207,28
+ 586               	.global	serial_writestr
+ 587               		.type	serial_writestr, @function
+ 588               	serial_writestr:
+ 589               		.stabd	46,0,0
+ 205:serial.c      **** 
+ 206:serial.c      **** //Send string and look for null byte, no specified length
+ 207:serial.c      **** void serial_writestr(uint8_t *data){
+GAS LISTING /tmp/ccPFIQVl.s 			page 15
+
+
+ 590               		.stabn	68,0,207,.LM54-.LFBB8
+ 591               	.LM54:
+ 592               	.LFBB8:
+ 593 027e 1F93      		push r17
+ 594 0280 CF93      		push r28
+ 595 0282 DF93      		push r29
+ 596               	/* prologue: function */
+ 597               	/* frame size = 0 */
+ 598               	/* stack size = 3 */
+ 599               	.L__stack_usage = 3
+ 600 0284 EC01      		movw r28,r24
+ 208:serial.c      ****     uint8_t i= 0, r;
+ 601               		.stabn	68,0,208,.LM55-.LFBB8
+ 602               	.LM55:
+ 603 0286 10E0      		ldi r17,0
+ 209:serial.c      **** 	while((r = data[i++])) serial_writechar(r);
+ 604               		.stabn	68,0,209,.LM56-.LFBB8
+ 605               	.LM56:
+ 606 0288 00C0      		rjmp .L34
+ 607               	.L35:
+ 608               		.stabn	68,0,209,.LM57-.LFBB8
+ 609               	.LM57:
+ 610 028a 0E94 0000 		call serial_writechar
+ 611               	.L34:
+ 612               		.stabn	68,0,209,.LM58-.LFBB8
+ 613               	.LM58:
+ 614 028e FE01      		movw r30,r28
+ 615 0290 E10F      		add r30,r17
+ 616 0292 F11D      		adc r31,__zero_reg__
+ 617 0294 8081      		ld r24,Z
+ 618 0296 1F5F      		subi r17,lo8(-(1))
+ 619 0298 8111      		cpse r24,__zero_reg__
+ 620 029a 00C0      		rjmp .L35
+ 621               	/* epilogue start */
+ 210:serial.c      **** }//end serial_writestr
+ 622               		.stabn	68,0,210,.LM59-.LFBB8
+ 623               	.LM59:
+ 624 029c DF91      		pop r29
+ 625 029e CF91      		pop r28
+ 626 02a0 1F91      		pop r17
+ 627 02a2 0895      		ret
+ 628               		.size	serial_writestr, .-serial_writestr
+ 629               		.stabs	"i:r(8,2)",64,0,208,17
+ 630               		.stabs	"r:r(8,2)",64,0,208,24
+ 631               		.stabn	192,0,0,.LFBB8-.LFBB8
+ 632               		.stabn	224,0,0,.Lscope8-.LFBB8
+ 633               	.Lscope8:
+ 634               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 635               		.stabd	78,0,0
+ 636               		.stabs	"serial_writeblock_P:F(0,15)",36,0,216,serial_writeblock_P
+ 637               		.stabs	"data:P(0,17)=*(0,18)=k(0,2)",64,0,216,16
+ 638               		.stabs	"len:P(0,1)",64,0,216,14
+ 639               	.global	serial_writeblock_P
+ 640               		.type	serial_writeblock_P, @function
+ 641               	serial_writeblock_P:
+ 642               		.stabd	46,0,0
+ 211:serial.c      **** 
+GAS LISTING /tmp/ccPFIQVl.s 			page 16
+
+
+ 212:serial.c      **** 
+ 213:serial.c      **** /*
+ 214:serial.c      ****     Write block from flash
+ 215:serial.c      **** */
+ 216:serial.c      **** void serial_writeblock_P(PGM_P data, int len){
+ 643               		.stabn	68,0,216,.LM60-.LFBB9
+ 644               	.LM60:
+ 645               	.LFBB9:
+ 646 02a4 EF92      		push r14
+ 647 02a6 FF92      		push r15
+ 648 02a8 0F93      		push r16
+ 649 02aa 1F93      		push r17
+ 650 02ac CF93      		push r28
+ 651 02ae DF93      		push r29
+ 652               	/* prologue: function */
+ 653               	/* frame size = 0 */
+ 654               	/* stack size = 6 */
+ 655               	.L__stack_usage = 6
+ 656 02b0 8C01      		movw r16,r24
+ 657 02b2 7B01      		movw r14,r22
+ 217:serial.c      ****     int i;
+ 218:serial.c      ****     for (i = 0; i< len ; i++) serial_writechar(pgm_read_byte(&data[i]));
+ 658               		.stabn	68,0,218,.LM61-.LFBB9
+ 659               	.LM61:
+ 660 02b4 C0E0      		ldi r28,0
+ 661 02b6 D0E0      		ldi r29,0
+ 662 02b8 00C0      		rjmp .L37
+ 663               	.L38:
+ 664               	.LBB3:
+ 216:serial.c      **** void serial_writeblock_P(PGM_P data, int len){
+ 665               		.stabn	68,0,216,.LM62-.LFBB9
+ 666               	.LM62:
+ 667 02ba F801      		movw r30,r16
+ 668 02bc EC0F      		add r30,r28
+ 669 02be FD1F      		adc r31,r29
+ 670               		.stabn	68,0,218,.LM63-.LFBB9
+ 671               	.LM63:
+ 672               	/* #APP */
+ 673               	 ;  218 "serial.c" 1
+ 674 02c0 8491      		lpm r24, Z
+ 675               		
+ 676               	 ;  0 "" 2
+ 677               	/* #NOAPP */
+ 678               	.LBE3:
+ 679 02c2 0E94 0000 		call serial_writechar
+ 680 02c6 2196      		adiw r28,1
+ 681               	.L37:
+ 682               		.stabn	68,0,218,.LM64-.LFBB9
+ 683               	.LM64:
+ 684 02c8 CE15      		cp r28,r14
+ 685 02ca DF05      		cpc r29,r15
+ 686 02cc 04F0      		brlt .L38
+ 687               	/* epilogue start */
+ 219:serial.c      **** }//end serial_writedata_p
+ 688               		.stabn	68,0,219,.LM65-.LFBB9
+ 689               	.LM65:
+ 690 02ce DF91      		pop r29
+GAS LISTING /tmp/ccPFIQVl.s 			page 17
+
+
+ 691 02d0 CF91      		pop r28
+ 692 02d2 1F91      		pop r17
+ 693 02d4 0F91      		pop r16
+ 694 02d6 FF90      		pop r15
+ 695 02d8 EF90      		pop r14
+ 696 02da 0895      		ret
+ 697               		.size	serial_writeblock_P, .-serial_writeblock_P
+ 698               		.stabs	"i:r(0,1)",64,0,217,28
+ 699               		.stabn	192,0,0,.LFBB9-.LFBB9
+ 700               		.stabn	224,0,0,.Lscope9-.LFBB9
+ 701               	.Lscope9:
+ 702               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 703               		.stabd	78,0,0
+ 704               		.stabs	"serial_writestr_P:F(0,15)",36,0,221,serial_writestr_P
+ 705               		.stabs	"data:P(0,17)",64,0,221,28
+ 706               	.global	serial_writestr_P
+ 707               		.type	serial_writestr_P, @function
+ 708               	serial_writestr_P:
+ 709               		.stabd	46,0,0
+ 220:serial.c      **** 
+ 221:serial.c      **** void serial_writestr_P(PGM_P data){
+ 710               		.stabn	68,0,221,.LM66-.LFBB10
+ 711               	.LM66:
+ 712               	.LFBB10:
+ 713 02dc 1F93      		push r17
+ 714 02de CF93      		push r28
+ 715 02e0 DF93      		push r29
+ 716               	/* prologue: function */
+ 717               	/* frame size = 0 */
+ 718               	/* stack size = 3 */
+ 719               	.L__stack_usage = 3
+ 720 02e2 EC01      		movw r28,r24
+ 222:serial.c      ****     uint8_t r, i=0;
+ 721               		.stabn	68,0,222,.LM67-.LFBB10
+ 722               	.LM67:
+ 723 02e4 10E0      		ldi r17,0
+ 223:serial.c      ****     // Breaks when r is assigned a zero
+ 224:serial.c      ****     while ((r = pgm_read_byte(&data[i++])))	serial_writechar(r);
+ 724               		.stabn	68,0,224,.LM68-.LFBB10
+ 725               	.LM68:
+ 726 02e6 00C0      		rjmp .L40
+ 727               	.L41:
+ 728               		.stabn	68,0,224,.LM69-.LFBB10
+ 729               	.LM69:
+ 730 02e8 0E94 0000 		call serial_writechar
+ 731               	.L40:
+ 732               	.LBB4:
+ 733               		.stabn	68,0,224,.LM70-.LFBB10
+ 734               	.LM70:
+ 735 02ec FE01      		movw r30,r28
+ 736 02ee E10F      		add r30,r17
+ 737 02f0 F11D      		adc r31,__zero_reg__
+ 738 02f2 1F5F      		subi r17,lo8(-(1))
+ 739               	/* #APP */
+ 740               	 ;  224 "serial.c" 1
+ 741 02f4 8491      		lpm r24, Z
+ 742               		
+GAS LISTING /tmp/ccPFIQVl.s 			page 18
+
+
+ 743               	 ;  0 "" 2
+ 744               	/* #NOAPP */
+ 745               	.LBE4:
+ 746 02f6 8111      		cpse r24,__zero_reg__
+ 747 02f8 00C0      		rjmp .L41
+ 748               	/* epilogue start */
+ 225:serial.c      **** }//end serial_writestr_p
+ 749               		.stabn	68,0,225,.LM71-.LFBB10
+ 750               	.LM71:
+ 751 02fa DF91      		pop r29
+ 752 02fc CF91      		pop r28
+ 753 02fe 1F91      		pop r17
+ 754 0300 0895      		ret
+ 755               		.size	serial_writestr_P, .-serial_writestr_P
+ 756               		.stabs	"i:r(8,2)",64,0,222,17
+ 757               		.stabn	192,0,0,.LFBB10-.LFBB10
+ 758               		.stabs	"__addr16:r(8,4)",64,0,224,30
+ 759               		.stabn	192,0,0,.LBB4-.LFBB10
+ 760               		.stabn	224,0,0,.LBE4-.LFBB10
+ 761               		.stabn	224,0,0,.Lscope10-.LFBB10
+ 762               	.Lscope10:
+ 763               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 764               		.stabd	78,0,0
+ 765               	.global	flowflags
+ 766               		.data
+ 767               		.type	flowflags, @object
+ 768               		.size	flowflags, 1
+ 769               	flowflags:
+ 770 0000 01        		.byte	1
+ 771               		.comm	txbuf,64,1
+ 772               	.global	txtail
+ 773               		.section .bss
+ 774               		.type	txtail, @object
+ 775               		.size	txtail, 1
+ 776               	txtail:
+ 777 0000 00        		.zero	1
+ 778               	.global	txhead
+ 779               		.type	txhead, @object
+ 780               		.size	txhead, 1
+ 781               	txhead:
+ 782 0001 00        		.zero	1
+ 783               		.comm	rxbuf,64,1
+ 784               	.global	rxtail
+ 785               		.type	rxtail, @object
+ 786               		.size	rxtail, 1
+ 787               	rxtail:
+ 788 0002 00        		.zero	1
+ 789               	.global	rxhead
+ 790               		.type	rxhead, @object
+ 791               		.size	rxhead, 1
+ 792               	rxhead:
+ 793 0003 00        		.zero	1
+ 794               		.stabs	"rxhead:G(0,19)=B(8,2)",32,0,22,0
+ 795               		.stabs	"rxtail:G(0,19)",32,0,24,0
+ 796               		.stabs	"rxbuf:G(0,20)=ar(0,21)=r(0,21);0;0177777;;0;63;(0,19)",32,0,26,0
+ 797               		.stabs	"txhead:G(0,19)",32,0,29,0
+ 798               		.stabs	"txtail:G(0,19)",32,0,31,0
+GAS LISTING /tmp/ccPFIQVl.s 			page 19
+
+
+ 799               		.stabs	"txbuf:G(0,20)",32,0,33,0
+ 800               		.stabs	"flowflags:G(0,19)",32,0,73,0
+ 801               		.text
+ 802               		.stabs	"",100,0,0,.Letext0
+ 803               	.Letext0:
+ 804               		.ident	"GCC: (GNU) 4.7.0"
+ 805               	.global __do_copy_data
+ 806               	.global __do_clear_bss
+GAS LISTING /tmp/ccPFIQVl.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 serial.c
+     /tmp/ccPFIQVl.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccPFIQVl.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccPFIQVl.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccPFIQVl.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccPFIQVl.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccPFIQVl.s:84     .text:0000000000000000 serial_init
+     /tmp/ccPFIQVl.s:126    .text:0000000000000028 UART1_RX_vect
+     /tmp/ccPFIQVl.s:787    .bss:0000000000000002 rxtail
+     /tmp/ccPFIQVl.s:792    .bss:0000000000000003 rxhead
+                            *COM*:0000000000000040 rxbuf
+     /tmp/ccPFIQVl.s:769    .data:0000000000000000 flowflags
+     /tmp/ccPFIQVl.s:238    .text:00000000000000c2 __vector_26
+     /tmp/ccPFIQVl.s:776    .bss:0000000000000000 txtail
+                            *COM*:0000000000000040 txbuf
+     /tmp/ccPFIQVl.s:348    .text:000000000000015a serial_rxchars
+     /tmp/ccPFIQVl.s:371    .text:0000000000000168 serial_popchar
+     /tmp/ccPFIQVl.s:449    .text:00000000000001cc serial_writechar
+     /tmp/ccPFIQVl.s:781    .bss:0000000000000001 txhead
+     /tmp/ccPFIQVl.s:531    .text:0000000000000246 serial_writeblock
+     /tmp/ccPFIQVl.s:588    .text:000000000000027e serial_writestr
+     /tmp/ccPFIQVl.s:641    .text:00000000000002a4 serial_writeblock_P
+     /tmp/ccPFIQVl.s:708    .text:00000000000002dc serial_writestr_P
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss
