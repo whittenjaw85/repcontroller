@@ -84,7 +84,7 @@ PROJECTNAME=repware
 # (list all files to compile, e.g. 'a.c b.cpp as.S'):
 # Use .cc, .cpp or .C suffix for C++ files, use .S 
 # (NOT .s !!!) for assembly source code files.
-PRJSRC=config.h main.c serial.h serial.c 
+PRJSRC=config.h main.c serial.h serial.c dda.h dda.c
 
 # additional includes (e.g. -I/path/to/mydir)
 INC=

@@ -25,24 +25,28 @@
 //Motherboard
 //#define HOST
 
+//Number of axes
+#define AXES_QUANTITY 4
+#define GANTRY 3
+
 //Belt is T2.5, 400 steps per rotation
-#define STEPS_PER_M_X	320000
-#define STEPS_PER_M_Y	320000
+#define STEPS_PER_M_X 320000
+#define STEPS_PER_M_Y 320000
 
 //Threaded rod is M8x1.25
-#define STEPS_PER_M_Z	320000
+#define STEPS_PER_M_Z 320000
 
 //Extruder Rate
-#define STEPS_PER_M_E	320000
+#define STEPS_PER_M_E 320000
 
 
 //Feedrates
-#define MAXIMUM_FEEDRATE_X  200
-#define MAXIMUM_FEEDRATE_Y  200
-#define MAXIMUM_FEEDRARE_Z  200
-#define SEARCH_FEEDRATE	    50
-#define SEARCH_FEEDRATE	    50
-#define SEARCH_FEEDRATE	    50
+#define MAXIMUM_FEEDRATE_X 200
+#define MAXIMUM_FEEDRATE_Y 200
+#define MAXIMUM_FEEDRATE_Z 200
+#define SEARCH_FEEDRATE_X 50
+#define SEARCH_FEEDRATE_Y 50
+#define SEARCH_FEEDRATE_Z 50
 
 
 ///

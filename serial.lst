@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccPFIQVl.s 			page 1
+GAS LISTING /tmp/ccvYcyc0.s 			page 1
 
 
    1               		.file	"serial.c"
@@ -7,7 +7,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
    4               	__SREG__ = 0x3f
    5               	__tmp_reg__ = 0
    6               	__zero_reg__ = 1
-   7               		.stabs	"/home/jon/prog/c/avr/repware/",100,0,2,.Ltext0
+   7               		.stabs	"/home/jon/prog/c/avr/repcontroller/",100,0,2,.Ltext0
    8               		.stabs	"serial.c",100,0,2,.Ltext0
    9               		.text
   10               	.Ltext0:
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
   55               		.stabs	"int_fast16_t:t(8,21)=(8,3)",128,0,223,0
   56               		.stabs	"uint_fast16_t:t(8,22)=(8,4)",128,0,228,0
   57               		.stabs	"int_fast32_t:t(8,23)=(8,5)",128,0,233,0
-GAS LISTING /tmp/ccPFIQVl.s 			page 2
+GAS LISTING /tmp/ccvYcyc0.s 			page 2
 
 
   58               		.stabs	"uint_fast32_t:t(8,24)=(8,6)",128,0,238,0
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
   27:serial.c      **** 
   28:serial.c      **** //TxBuffer head
   29:serial.c      **** volatile uint8_t txhead = 0;
-GAS LISTING /tmp/ccPFIQVl.s 			page 3
+GAS LISTING /tmp/ccvYcyc0.s 			page 3
 
 
   30:serial.c      **** //TxBufferTail
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
   90               	/* frame size = 0 */
   91               	/* stack size = 0 */
   92               	.L__stack_usage = 0
-GAS LISTING /tmp/ccPFIQVl.s 			page 4
+GAS LISTING /tmp/ccvYcyc0.s 			page 4
 
 
   80:serial.c      **** #if BAUD > 38401
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
   99:serial.c      **** {
  128               		.stabn	68,0,99,.LM6-.LFBB2
  129               	.LM6:
-GAS LISTING /tmp/ccPFIQVl.s 			page 5
+GAS LISTING /tmp/ccvYcyc0.s 			page 5
 
 
  130               	.LFBB2:
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  176               		.stabn	68,0,107,.LM10-.LFBB2
  177               	.LM10:
  178 0076 8091 CE00 		lds r24,206
-GAS LISTING /tmp/ccPFIQVl.s 			page 6
+GAS LISTING /tmp/ccvYcyc0.s 			page 6
 
 
  179               	.L4:
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  217 00b2 8F91      		pop r24
  218 00b4 3F91      		pop r19
  219 00b6 2F91      		pop r18
-GAS LISTING /tmp/ccPFIQVl.s 			page 7
+GAS LISTING /tmp/ccvYcyc0.s 			page 7
 
 
  220 00b8 0F90      		pop r0
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  261               		.stabn	68,0,136,.LM19-.LFBB3
  262               	.LM19:
  263 00da 8091 0000 		lds r24,flowflags
-GAS LISTING /tmp/ccPFIQVl.s 			page 8
+GAS LISTING /tmp/ccvYcyc0.s 			page 8
 
 
  264 00de 80FF      		sbrs r24,0
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  308 0126 8093 CE00 		sts 206,r24
  309 012a 8091 0000 		lds r24,txtail
  310 012e 8F5F      		subi r24,lo8(-(1))
-GAS LISTING /tmp/ccPFIQVl.s 			page 9
+GAS LISTING /tmp/ccvYcyc0.s 			page 9
 
 
  311 0130 8F73      		andi r24,lo8(63)
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  352               	.LFBB4:
  353               	/* prologue: function */
  354               	/* frame size = 0 */
-GAS LISTING /tmp/ccPFIQVl.s 			page 10
+GAS LISTING /tmp/ccvYcyc0.s 			page 10
 
 
  355               	/* stack size = 0 */
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  400 0190 9F73      		andi r25,lo8(63)
  401 0192 9093 0000 		sts rxtail,r25
  402 0196 00C0      		rjmp .L16
-GAS LISTING /tmp/ccPFIQVl.s 			page 11
+GAS LISTING /tmp/ccvYcyc0.s 			page 11
 
 
  403               	.L18:
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  446               		.stabs	"data:P(8,2)",64,0,185,24
  447               	.global	serial_writechar
  448               		.type	serial_writechar, @function
-GAS LISTING /tmp/ccPFIQVl.s 			page 12
+GAS LISTING /tmp/ccvYcyc0.s 			page 12
 
 
  449               	serial_writechar:
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  190:serial.c      ****     }
  191:serial.c      ****     else{
  192:serial.c      **** 	//interrupts disabled, write instead of blocking
-GAS LISTING /tmp/ccPFIQVl.s 			page 13
+GAS LISTING /tmp/ccvYcyc0.s 			page 13
 
 
  193:serial.c      ****         if (buffer_canwrite(tx))
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  537 0248 FF92      		push r15
  538 024a 0F93      		push r16
  539 024c 1F93      		push r17
-GAS LISTING /tmp/ccPFIQVl.s 			page 14
+GAS LISTING /tmp/ccvYcyc0.s 			page 14
 
 
  540 024e CF93      		push r28
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  205:serial.c      **** 
  206:serial.c      **** //Send string and look for null byte, no specified length
  207:serial.c      **** void serial_writestr(uint8_t *data){
-GAS LISTING /tmp/ccPFIQVl.s 			page 15
+GAS LISTING /tmp/ccvYcyc0.s 			page 15
 
 
  590               		.stabn	68,0,207,.LM54-.LFBB8
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  641               	serial_writeblock_P:
  642               		.stabd	46,0,0
  211:serial.c      **** 
-GAS LISTING /tmp/ccPFIQVl.s 			page 16
+GAS LISTING /tmp/ccvYcyc0.s 			page 16
 
 
  212:serial.c      **** 
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  688               		.stabn	68,0,219,.LM65-.LFBB9
  689               	.LM65:
  690 02ce DF91      		pop r29
-GAS LISTING /tmp/ccPFIQVl.s 			page 17
+GAS LISTING /tmp/ccvYcyc0.s 			page 17
 
 
  691 02d0 CF91      		pop r28
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  740               	 ;  224 "serial.c" 1
  741 02f4 8491      		lpm r24, Z
  742               		
-GAS LISTING /tmp/ccPFIQVl.s 			page 18
+GAS LISTING /tmp/ccvYcyc0.s 			page 18
 
 
  743               	 ;  0 "" 2
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  796               		.stabs	"rxbuf:G(0,20)=ar(0,21)=r(0,21);0;0177777;;0;63;(0,19)",32,0,26,0
  797               		.stabs	"txhead:G(0,19)",32,0,29,0
  798               		.stabs	"txtail:G(0,19)",32,0,31,0
-GAS LISTING /tmp/ccPFIQVl.s 			page 19
+GAS LISTING /tmp/ccvYcyc0.s 			page 19
 
 
  799               		.stabs	"txbuf:G(0,20)",32,0,33,0
@@ -1089,33 +1089,33 @@ GAS LISTING /tmp/ccPFIQVl.s 			page 1
  804               		.ident	"GCC: (GNU) 4.7.0"
  805               	.global __do_copy_data
  806               	.global __do_clear_bss
-GAS LISTING /tmp/ccPFIQVl.s 			page 20
+GAS LISTING /tmp/ccvYcyc0.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 serial.c
-     /tmp/ccPFIQVl.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/ccPFIQVl.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/ccPFIQVl.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/ccPFIQVl.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/ccPFIQVl.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/ccPFIQVl.s:84     .text:0000000000000000 serial_init
-     /tmp/ccPFIQVl.s:126    .text:0000000000000028 UART1_RX_vect
-     /tmp/ccPFIQVl.s:787    .bss:0000000000000002 rxtail
-     /tmp/ccPFIQVl.s:792    .bss:0000000000000003 rxhead
+     /tmp/ccvYcyc0.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccvYcyc0.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccvYcyc0.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccvYcyc0.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccvYcyc0.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccvYcyc0.s:84     .text:0000000000000000 serial_init
+     /tmp/ccvYcyc0.s:126    .text:0000000000000028 UART1_RX_vect
+     /tmp/ccvYcyc0.s:787    .bss:0000000000000002 rxtail
+     /tmp/ccvYcyc0.s:792    .bss:0000000000000003 rxhead
                             *COM*:0000000000000040 rxbuf
-     /tmp/ccPFIQVl.s:769    .data:0000000000000000 flowflags
-     /tmp/ccPFIQVl.s:238    .text:00000000000000c2 __vector_26
-     /tmp/ccPFIQVl.s:776    .bss:0000000000000000 txtail
+     /tmp/ccvYcyc0.s:769    .data:0000000000000000 flowflags
+     /tmp/ccvYcyc0.s:238    .text:00000000000000c2 __vector_26
+     /tmp/ccvYcyc0.s:776    .bss:0000000000000000 txtail
                             *COM*:0000000000000040 txbuf
-     /tmp/ccPFIQVl.s:348    .text:000000000000015a serial_rxchars
-     /tmp/ccPFIQVl.s:371    .text:0000000000000168 serial_popchar
-     /tmp/ccPFIQVl.s:449    .text:00000000000001cc serial_writechar
-     /tmp/ccPFIQVl.s:781    .bss:0000000000000001 txhead
-     /tmp/ccPFIQVl.s:531    .text:0000000000000246 serial_writeblock
-     /tmp/ccPFIQVl.s:588    .text:000000000000027e serial_writestr
-     /tmp/ccPFIQVl.s:641    .text:00000000000002a4 serial_writeblock_P
-     /tmp/ccPFIQVl.s:708    .text:00000000000002dc serial_writestr_P
+     /tmp/ccvYcyc0.s:348    .text:000000000000015a serial_rxchars
+     /tmp/ccvYcyc0.s:371    .text:0000000000000168 serial_popchar
+     /tmp/ccvYcyc0.s:449    .text:00000000000001cc serial_writechar
+     /tmp/ccvYcyc0.s:781    .bss:0000000000000001 txhead
+     /tmp/ccvYcyc0.s:531    .text:0000000000000246 serial_writeblock
+     /tmp/ccvYcyc0.s:588    .text:000000000000027e serial_writestr
+     /tmp/ccvYcyc0.s:641    .text:00000000000002a4 serial_writeblock_P
+     /tmp/ccvYcyc0.s:708    .text:00000000000002dc serial_writestr_P
 
 UNDEFINED SYMBOLS
 __do_copy_data

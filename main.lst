@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cckL26a9.s 			page 1
+GAS LISTING /tmp/cc5X19hw.s 			page 1
 
 
    1               		.file	"main.c"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cckL26a9.s 			page 1
   55               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
   56               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
   57               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
-GAS LISTING /tmp/cckL26a9.s 			page 2
+GAS LISTING /tmp/cc5X19hw.s 			page 2
 
 
   58               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
@@ -100,16 +100,16 @@ GAS LISTING /tmp/cckL26a9.s 			page 1
   90               		.stabs	"",100,0,0,.Letext0
   91               	.Letext0:
   92               		.ident	"GCC: (GNU) 4.7.0"
-GAS LISTING /tmp/cckL26a9.s 			page 3
+GAS LISTING /tmp/cc5X19hw.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/cckL26a9.s:2      *ABS*:000000000000003e __SP_H__
-     /tmp/cckL26a9.s:3      *ABS*:000000000000003d __SP_L__
-     /tmp/cckL26a9.s:4      *ABS*:000000000000003f __SREG__
-     /tmp/cckL26a9.s:5      *ABS*:0000000000000000 __tmp_reg__
-     /tmp/cckL26a9.s:6      *ABS*:0000000000000001 __zero_reg__
-     /tmp/cckL26a9.s:74     .text.startup:0000000000000000 main
+     /tmp/cc5X19hw.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc5X19hw.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc5X19hw.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc5X19hw.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc5X19hw.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc5X19hw.s:74     .text.startup:0000000000000000 main
 
 NO UNDEFINED SYMBOLS
