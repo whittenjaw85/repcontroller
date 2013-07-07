@@ -78,15 +78,15 @@ volatile uint8_t flowflags = FLOWFLAG_SEND_XON;
 //Setup baud generator and interrupts, clear buffers
 void serial_init(){
 #if BAUD > 38401
-	UCSR1A = MASK(U2X1); //asynchronous doublespeed mode
-	UBRR1 = (((F_CPU / 8) / BAUD) - 0.5);
+    UCSR1A = MASK(U2X1); //asynchronous doublespeed mode
+    UBRR1 = (((F_CPU / 8) / BAUD) - 0.5);
 #else
-	UCSR1A = 0; //set asynchronous normal mode
-	UBRR! = (((F_CPU / 16) / BAUD) - 0.5); //asynchronous normal mode
+    UCSR1A = 0; //set asynchronous normal mode
+    UBRR! = (((F_CPU / 16) / BAUD) - 0.5); //asynchronous normal mode
 #endif
-	UCSR1B = MASK(RXEN1) | MASK(TXEN1); //enable rx and tx
-	UCSR1C = MASK(UCSZ11) | MASK(UCSZ10); //8-bit data no parity 1-stop
-	UCSR1B |= MASK(RXCIE1) | MASK(UDRIE1); //Serial Interrupts Enable
+    UCSR1B = MASK(RXEN1) | MASK(TXEN1); //enable rx and tx
+    UCSR1C = MASK(UCSZ11) | MASK(UCSZ10); //8-bit data no parity 1-stop
+    UCSR1B |= MASK(RXCIE1) | MASK(UDRIE1); //Serial Interrupts Enable
 }
 
 
@@ -106,11 +106,11 @@ ISR(UART1_RX_vect)
         //Not reading character requires discarding it
         trash = UDR1;
     }
-   
+
     #ifdef XONXOFF
     if (flowflags & FLOWFLAG_STATE_XON && buffer_canwrite(rx) < 16){
-	//The buffer has only 16 free characters left, so send XOFF
-	// more characters may be transmitted until XOFF affects
+    //The buffer has only 16 free characters left, so send XOFF
+    // more characters may be transmitted until XOFF affects
         flowflags = FLOWFLAG_SEND_XOFF | FLOWFLAG_STATE_XON;
         //enable Tx Interrupt
         UCSR1B |= MASK(UDRIE1);
@@ -122,7 +122,7 @@ ISR(UART1_RX_vect)
     SREG = sreg_save;
 }//end RX Interrupt ISR
 
-//Transmit Buffer Ready Vector 
+//Transmit Buffer Ready Vector
 #ifdef USART_UDRE_vect
 ISR(USART_UDRE_vect)
 #else
@@ -165,12 +165,12 @@ uint8_t serial_popchar()
 
     //Ensure buffer is empty, then read
     if (buffer_canread(rx))
-	buffer_pop(rx, c);
+        buffer_pop(rx, c);
 #ifdef XONXOFF
     if ((flowflags & FLOWFLAG_STATE_XON) == 0 && buffer_canread(rx) < 16){
-	//the buffer has (BUFSIZE - 16) free characters again, send XON
-	flowflags = FLOWFLAG_SEND_XON;
-	UCSR1B |= MASK(UDRIE1);
+        //the buffer has (BUFSIZE - 16) free characters again, send XON
+        flowflags = FLOWFLAG_SEND_XON;
+        UCSR1B |= MASK(UDRIE1);
     }
 #endif
 
@@ -189,7 +189,7 @@ void serial_writechar(uint8_t data)
         for(;buffer_canwrite(tx) == 0;) buffer_push(tx, data);
     }
     else{
-	//interrupts disabled, write instead of blocking
+        //interrupts disabled, write instead of blocking
         if (buffer_canwrite(tx))
             buffer_push(tx, data);
     }
@@ -200,13 +200,13 @@ void serial_writechar(uint8_t data)
 //Send block of data
 void serial_writeblock(void *data, int len){
     int i;
-    for (i = 0; i < len ; i++)	serial_writechar(((uint8_t *) data)[i]);
+    for (i = 0; i < len ; i++) serial_writechar(((uint8_t *) data)[i]);
 }//End serial_writedata
 
 //Send string and look for null byte, no specified length
 void serial_writestr(uint8_t *data){
     uint8_t i= 0, r;
-	while((r = data[i++])) serial_writechar(r);
+    while((r = data[i++])) serial_writechar(r);
 }//end serial_writestr
 
 

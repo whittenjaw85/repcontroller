@@ -15,6 +15,7 @@
 typedef struct{
     int32_t pos[AXES_QUANTITY];
     uint32_t F;
+    uint8_t e_relative :1; //overrides all_relative
 } TARGET;
 
 

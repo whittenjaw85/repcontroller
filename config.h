@@ -12,8 +12,17 @@
 
 
 */
+/*
+                  0. Important global variables
 
-//
+
+                  TARGET startpoint | point used for calculation
+                  TARGET current_position | used during gcode interpretation
+                  GCODE_COMMAND next_target | used to control the gcode parser
+                  uint8_t last_field | last character received
+
+
+*/
 //                 1. Hardware
 //
 
